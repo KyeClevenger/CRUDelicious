@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "All Foods";
+}
+
+@model List<Food>
+
+<h1 class="text-center m-4">All Food</h1>
+@foreach (Food p in Model)
+{
+    <div class="shadow p-3 mb-3 text-center">
+    <h3> @p.Dish</h3>
+    <p>Chef: @p.Chef</p>
+    <p>Yummy Scale: @p.Tasty</p>
+    <p>Calories: @p.Cals</p>
+    <p>About Dish: @p.Description</p>
+    <div class="m-3">
+        <a asp-route-foodId=@p.FoodId asp-action="ViewFood" asp-controller="Food" method="POST" class="btn btn-primary">View Food</a>
+    </div>
+    <div class="m-3">
+        <form asp-route-foodId=@p.FoodId asp-action="DeleteFood" asp-controller="Food" method="POST">
+            <button class="btn btn-danger">Delete</button></form>
+    </div>
+</div>
+}

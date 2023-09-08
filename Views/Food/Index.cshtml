@@ -1,0 +1,11 @@
+@model Food
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome To CRUDelicious</h1>
+    <h4>Check Out Some Recent Dishes!!</h4>
+    <h3> @Model.Dish</h3>
+    <p>Chef: @Model.Chef</p>
+</div>

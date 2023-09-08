@@ -1,0 +1,34 @@
+@model Food
+
+@{
+    ViewData["Title"] = "New Food";
+}
+<h1 class="text-center m-4">Add A Food</h1>
+<form asp-action="CreateFood" asp-controller="Food" method="POST" class="shadow p-3 rounded">
+    <div class="mb-3">
+        <label asp-for="Dish"></label>
+        <input asp-for="Dish" class="form-control">
+        <span class="text-danger" asp-validation-for="Dish"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Chef"></label>
+        <input asp-for="Chef" class="form-control">
+        <span class="text-danger" asp-validation-for="Chef"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Tasty"></label>
+        <input asp-for="Tasty" class="form-control">
+        <span class="text-danger" asp-validation-for="Tasty"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Cals"></label>
+        <input asp-for="Cals" class="form-control">
+        <span class="text-danger" asp-validation-for="Cals"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control">
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+</form>
